@@ -1,0 +1,121 @@
+<div>
+  <app-topbar></app-topbar>
+</div>
+<div>
+  <app-header></app-header>
+</div>
+<div class="main-container">
+  <div
+    id="post-7"
+    class="full-width moduled-page post-7 page type-page status-publish hentry"
+  >
+    <div class="kc_clfw"></div>
+    <div class="kc-elm kc-css-199837 kc-row-container module">
+      <div class="wc-row">
+        <div class="kc-wrap-columns">
+          <div class="kc-elm kc-css-148982 small-12 columns small-12">
+            <div class="kc-col-container">
+              <div class="widget widget_revslider kc-elm kc-css-271451">
+                <app-banner></app-banner>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="kc-elm kc-css-752881 kc-row-container module grey-bg">
+      <div class="wc-row row">
+        <div class="kc-wrap-columns">
+          <div class="kc-elm kc-css-323607 small-12 columns small-12">
+            <div class="kc-col-container">
+              <ul>
+                <li *ngFor="let item of phanloai">
+                  <div class="section-title-wrapper">
+                    <div class="section-title">
+                      <h2>{{ item.name }}</h2>
+                      <p>
+                        Một số mẫu
+                        <a routerLink="san-pham/{{ item.ID }}">{{item.name}}</a>
+                        đẹp!
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="tabs-panel padding-between team-wrap is-active"
+                    id="cuanhomcaocap"
+                    role="tabpanel"
+                    aria-hidden="false"
+                    aria-labelledby="cuanhomcaocap-label"
+                  >
+                    <div
+                      class="medium-4 small-12 columns"
+                      style="margin-bottom: 16px !important"
+                      *ngFor="let items of sanpham"
+                    >
+                      <div class="course" *ngIf="items.id_loai === item.ID">
+                        <div class="course-thumb">
+                          <a routerLink="san-pham-detail/{{ items.ID }}"
+                            ><img
+                              width="350"
+                              height="250"
+                              src="{{ items.anh }}"
+                              class="attachment-wc-grid-course-thumb size-wc-grid-course-thumb wp-post-image"
+                              alt="{{ items.name }}"
+                          /></a>
+                        </div>
+                        <h3>
+                          <a
+                            routerLink="san-pham-detail/{{ items.ID }}"
+                            style="font-size: 18px !important"
+                            >{{ items.name }}</a
+                          >
+                        </h3>
+                        <p>Mã SP: {{ items.ID }}</p>
+                        <a
+                          routerLink="dat-hang/{{ items.ID }}"
+                          class="secondary button"
+                          >Đặt hàng ngay</a
+                        >
+                        <div class="clearfix"></div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="kc-elm kc-css-811425 kc-row-container module">
+      <app-duannoibat></app-duannoibat>
+    </div>
+    <div
+      class="kc-elm kc-css-368420 kc-row-container module transparent-background"
+    >
+      <app-spmoi></app-spmoi>
+    </div>
+    <div class="kc-elm kc-css-476170 kc-row-container module">
+      <app-thuvienhinhanh></app-thuvienhinhanh>
+    </div>
+    <div
+      class="kc-elm kc-css-50017 kc-row-container module transparent-background"
+    >
+      <app-tuvan-baogia></app-tuvan-baogia>
+    </div>
+    <div class="kc-elm kc-css-696464 kc-row-container module">
+      <app-danhgia></app-danhgia>
+    </div>
+    <div class="kc-elm kc-css-300021 kc-row-container module grey-bg">
+      <app-sanphamnoibat></app-sanphamnoibat>
+    </div>
+
+    <div class="kc-elm kc-css-840435 kc-row-container module">
+      <app-doitac></app-doitac>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>

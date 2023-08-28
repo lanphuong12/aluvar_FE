@@ -1,0 +1,297 @@
+<div class="sticky-container" data-sticky-container="" style="height: 60px">
+  <div
+    class="header sticky is-anchored is-at-top"
+    style="
+      width: 100%;
+      max-width: 2126px;
+      margin-top: 0px;
+      bottom: auto;
+      top: 0px;
+    "
+    data-sticky="x55atp-sticky"
+    data-options="marginTop:0;"
+    data-resize="zxstke-sticky"
+  >
+    <div class="row">
+      <div class="large-3 medium-6 small-12 columns">
+        <div class="logo">
+          <a routerLink="/" class="custom-logo-link" rel="home" scrollToTop>
+            <img src="../../../assets/images/logo.png" class="custom-logo" alt="Nhôm cao cấp"
+          /></a>
+        </div>
+      </div>
+      <div class="large-9 medium-6 small-12 columns nav-wrap">
+        <div class="top-bar yespadd">
+          <div class="top-bar-title">
+            <span
+              data-responsive-toggle="responsive-menu"
+              data-hide-for="large"
+              style="display: none"
+            >
+              <a data-toggle=""
+                ><span class="menu-icon dark float-left"></span
+              ></a>
+            </span>
+          </div>
+          <nav id="responsive-menu" class="menu-main-menu-container">
+            <ul
+              class="menu vertical large-horizontal float-right dropdown"
+              data-responsive-menu="accordion large-dropdown"
+              role="menubar"
+              data-dropdown-menu="5zgq9d-dropdown-menu"
+              data-mutate="vunnhj-responsive-menu"
+              data-events="mutate"
+            >
+              <li class="single-sub parent-nav" role="menuitem">
+                <a routerLink="/">Trang chủ</a>
+              </li>
+              <li
+                class="single-sub parent-nav is-dropdown-submenu-parent opens-right"
+                role="menuitem"
+                aria-haspopup="true"
+                aria-label="Giới thiệu"
+                data-is-click="false"
+              >
+                <a routerLink="/gioi-thieu">Giới thiệu</a>
+                <ul
+                  class="child-nav menu vertical submenu is-dropdown-submenu first-sub"
+                  data-submenu=""
+                  role="menu"
+                  style=""
+                >
+                  <li
+                    role="menuitem"
+                    class="is-submenu-item is-dropdown-submenu-item"
+                  >
+                    <a href="/gioi-thieu/1/Vi-sao-chon-Chung-toi.htm"
+                      >Vì sao chọn Chúng tôi</a
+                    >
+                  </li>
+
+                  <li
+                    role="menuitem"
+                    class="is-submenu-item is-dropdown-submenu-item"
+                  >
+                    <a href="/gioi-thieu/2/Tam-nhin-Su-menh.htm"
+                      >Tầm nhìn Sứ mệnh</a
+                    >
+                  </li>
+
+                  <li
+                    role="menuitem"
+                    class="is-submenu-item is-dropdown-submenu-item"
+                  >
+                    <a href="/gioi-thieu/3/Gia-tri-cot-loi.htm"
+                      >Giá trị cốt lõi</a
+                    >
+                  </li>
+
+                  <li
+                    role="menuitem"
+                    class="is-submenu-item is-dropdown-submenu-item"
+                  >
+                    <a href="/gioi-thieu/4/Doi-ngu-Nhan-su.htm"
+                      >Đội ngũ Nhân sự</a
+                    >
+                  </li>
+
+                  <li
+                    role="menuitem"
+                    class="is-submenu-item is-dropdown-submenu-item"
+                  >
+                    <a href="/thu-vien-hinh-anh.htm">Thư viện Hình ảnh</a>
+                  </li>
+                </ul>
+              </li>
+              <li
+                class="single-sub parent-nav is-dropdown-submenu-parent opens-right"
+                role="menuitem"
+                aria-haspopup="true"
+                aria-label="Sản phẩm"
+                data-is-click="false"
+              >
+                <a routerLink="/san-pham" scrollToTop>Sản phẩm</a>
+                <ul
+                  class="child-nav menu vertical submenu is-dropdown-submenu first-sub"
+                  data-submenu=""
+                  role="menu"
+                  style=""
+                >
+                  <li
+                    *ngFor="let item of phanloai"
+                    role="menuitem"
+                    class="is-submenu-item is-dropdown-submenu-item"
+                  >
+                    <a routerLink="/san-pham/{{ item.ID }}">{{item.name}}</a>
+                  </li>
+                </ul>
+              </li>
+              <li
+                class="single-sub parent-nav is-dropdown-submenu-parent opens-right"
+                role="menuitem"
+                aria-haspopup="true"
+                aria-label="Công trình"
+                data-is-click="false"
+              >
+                <a routerLink="/cong-trinh" scrollToTop>Công trình</a>
+                <ul
+                  class="child-nav menu vertical submenu is-dropdown-submenu first-sub"
+                  data-submenu=""
+                  role="menu"
+                >
+                  <li
+                    role="menuitem"
+                    class="is-submenu-item is-dropdown-submenu-item"
+                  >
+                    <a routerLink="/cong-trinh/du-an-da-lam" scrollToTop>Dự án đã thực hiện</a>
+                  </li>
+
+                  <li
+                    role="menuitem"
+                    class="is-submenu-item is-dropdown-submenu-item"
+                  >
+                    <a routerLink="/cong-trinh/du-an-dang-lam" scrollToTop>Dự án đang thực hiện</a>
+                  </li>
+                </ul>
+              </li>
+              <li
+                class="single-sub parent-nav is-dropdown-submenu-parent opens-right"
+                role="menuitem"
+                aria-haspopup="true"
+                aria-label="Hỗ trợ Khách hàng"
+                data-is-click="false"
+              >
+                <a routerLink="/ho-tro" scrollToTop>Hỗ trợ Khách hàng</a>
+                <ul
+                  class="child-nav menu vertical submenu is-dropdown-submenu first-sub"
+                  data-submenu=""
+                  role="menu"
+                >
+                  <li
+                    role="menuitem"
+                    class="is-submenu-item is-dropdown-submenu-item"
+                  >
+                    <a routerLink="/ho-tro/ho-tro-dat-hang" scrollToTop>Hướng dẫn Đặt hàng</a>
+                  </li>
+                  <li
+                    role="menuitem"
+                    class="is-submenu-item is-dropdown-submenu-item"
+                  >
+                    <a routerLink="/ho-tro/huong-dan-thanh-toan" scrollToTop>Hướng dẫn Thanh toán</a>
+                  </li>
+                  <li
+                    role="menuitem"
+                    class="is-submenu-item is-dropdown-submenu-item"
+                  >
+                    <a routerLink="/ho-tro/cau-hoi-thuong-gap" scrollToTop>Câu hỏi thường gặp</a>
+                  </li>
+                  <li
+                    role="menuitem"
+                    class="is-submenu-item is-dropdown-submenu-item"
+                  >
+                    <a routerLink="/ho-tro/chinh-sach-khach-hang" scrollToTop>Chính sách Khách hàng</a>
+                  </li>
+                </ul>
+              </li>
+              <li
+                class="single-sub parent-nav is-dropdown-submenu-parent opens-right"
+                role="menuitem"
+                aria-haspopup="true"
+                aria-label="Tư vấn"
+                data-is-click="false"
+              >
+                <a routerLink="/tu-van" scrollToTop>Tư vấn</a>
+                <ul
+                  class="child-nav menu vertical submenu is-dropdown-submenu first-sub"
+                  data-submenu=""
+                  role="menu"
+                >
+                  <li
+                    role="menuitem"
+                    class="is-submenu-item is-dropdown-submenu-item"
+                  >
+                    <a routerLink="/tu-van/tu-van-san-pham" scrollToTop>Tư vấn sản phẩm</a>
+                  </li>
+
+                  <li
+                    role="menuitem"
+                    class="is-submenu-item is-dropdown-submenu-item"
+                  >
+                    <a routerLink="/tu-van/bao-gia-san-pham" scrollToTop>Báo giá Sản phẩm</a>
+                  </li>
+
+                  <li
+                    role="menuitem"
+                    class="is-submenu-item is-dropdown-submenu-item"
+                  >
+                    <a routerLink="/tu-van/tu-van-phong-thuy" scrollToTop>Tư vấn Phong thủy</a>
+                  </li>
+
+                  <li
+                    role="menuitem"
+                    class="is-submenu-item is-dropdown-submenu-item"
+                  >
+                    <a routerLink="/tu-van/tu-van-mua-hang" scrollToTop>Tư vấn Mua hàng</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li
+                class="single-sub parent-nav is-dropdown-submenu-parent opens-right"
+                role="menuitem"
+                aria-haspopup="true"
+                aria-label="Tin tức"
+                data-is-click="false"
+              >
+                <a routerLink="/tin-tuc" scrollToTop>Tin tức</a>
+                <ul
+                  class="child-nav menu vertical submenu is-dropdown-submenu first-sub"
+                  data-submenu=""
+                  role="menu"
+                >
+                  <li
+                    role="menuitem"
+                    class="is-submenu-item is-dropdown-submenu-item"
+                  >
+                    <a routerLink="/tin-tuc/tin-tuc-su-kien" scrollToTop>Tin tức Sự kiện</a>
+                  </li>
+
+                  <li
+                    role="menuitem"
+                    class="is-submenu-item is-dropdown-submenu-item"
+                  >
+                    <a routerLink="/tin-tuc/tin-tuc-noi-bo" scrollToTop>Tin tức Nội bộ</a>
+                  </li>
+
+                  <li
+                    role="menuitem"
+                    class="is-submenu-item is-dropdown-submenu-item"
+                  >
+                    <a routerLink="/tin-tuc/tin-tuc-xa-hoi" scrollToTop>Tin tức Xã hội</a>
+                  </li>
+
+                  <li
+                    role="menuitem"
+                    class="is-submenu-item is-dropdown-submenu-item"
+                  >
+                    <a routerLink="/tin-tuc/tin-tuc-noi-bat" scrollToTop>Tin tức Nổi bật</a>
+                  </li>
+
+                  <li
+                    role="menuitem"
+                    class="is-submenu-item is-dropdown-submenu-item"
+                  >
+                    <a routerLink="/tin-tuc/tuyen-dung" scrollToTop>Tuyển dụng</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="single-sub parent-nav" role="menuitem">
+                <a routerLink="/lien-he" scrollToTop>LIÊN HỆ</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

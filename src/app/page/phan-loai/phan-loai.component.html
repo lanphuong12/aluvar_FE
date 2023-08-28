@@ -1,0 +1,81 @@
+<div>
+  <app-header></app-header>
+</div>
+<div class="title-section module">
+  <div class="row">
+      <div class="small-12 columns"><h1 style="color:#ffffff !important">{{ phanloaiName }}</h1></div>
+      <div class="small-12 columns">
+          <ul class="breadcrumbs">
+              <li class="item-home"><a class="bread-link bread-home" routerLink="/" title="Trang chủ" style="color:#ffffff !important"><strong>Trang chủ</strong></a></li>
+              <li class="item-current item-153"><a routerLink="/san-pham" style="color:#ffffff !important; font-weight:bold;"> {{ phanloaiName }}</a></li>
+          </ul>
+      </div>
+  </div>
+</div>
+<div
+  id="post-153"
+  class="full-width moduled-page post-153 page type-page status-publish hentry"
+>
+  <div class="kc_clfw"></div>
+  <div class="kc-elm kc-css-139732 kc-row-container module">
+    <div class="wc-row row">
+      <div class="kc-wrap-columns">
+        <div class="kc-elm kc-css-143903 small-12 columns small-12">
+          <div class="kc-col-container">
+            <div class="kc-elm kc-css-904802 kc-raw-code">
+              <div class="section-title">
+                <h2>
+                  <a
+                    id="hplSubCateH"
+                    routerLink="/san-pham/{{phanloaiId}}"
+                    style="color: #5d5d5d"
+                    ><span id="lblSubcateH">{{ phanloaiName }}</span></a
+                  >
+                </h2>
+              </div>
+            </div>
+            <div class="row padding-between course-wrapper">
+              <div
+                class="medium-4 small-12 columns"
+                style="margin-bottom: 16px !important"
+                *ngFor="let items of sanpham"
+              >
+                <div class="course">
+                  <div class="course-thumb">
+                    <a routerLink="/san-pham-detail/{{ items.ID }}"
+                      ><img
+                        width="350"
+                        height="250"
+                        src="{{ items.anh }}"
+                        class="attachment-wc-grid-course-thumb size-wc-grid-course-thumb wp-post-image"
+                        alt="{{ items.name }}"
+                    /></a>
+                  </div>
+                  <h3>
+                    <a
+                      routerLink="/san-pham-detail/{{ items.ID }}"
+                      style="font-size: 18px !important"
+                      >{{ items.name }}</a
+                    >
+                  </h3>
+                  <p>Mã SP: {{ items.ID }}</p>
+                  <a
+                    routerLink="/dat-hang/{{ items.ID }}"
+                    class="secondary button"
+                    >Đặt hàng ngay</a
+                  >
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-spmoi></app-spmoi>
+</div>
+<div>
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,79 @@
+<div>
+  <app-header></app-header>
+</div>
+<div>
+  <div class="title-section module">
+    <div class="row">
+      <div class="small-12 columns">
+        <h1 style="color: #ffffff !important">SẢN PHẨM</h1>
+      </div>
+      <div class="small-12 columns">
+        <ul class="breadcrumbs">
+          <li class="item-home">
+            <a
+              class="bread-link bread-home"
+              routerLink="/"
+              title="Trang chủ"
+              style="color: #ffffff !important"
+              ><strong>Trang chủ</strong></a
+            >
+          </li>
+          <li class="item-current item-153">
+            <a
+              routerLink="/san-pham"
+              style="color: #ffffff !important; font-weight: bold"
+            >
+              SẢN PHẨM</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="kc-col-container">
+    <ul>
+      <li *ngFor="let item of phanloai">
+        <div class="kc-elm kc-css-998287 kc-raw-code">
+          <div class="section-title">
+            <h2>
+              <a routerLink="/san-pham/{{ item.ID }}"><span>{{item.name}}</span></a>
+            </h2>
+          </div>
+        </div>
+        <div class="row padding-between course-wrapper">
+          <div
+            class="medium-4 small-12 columns"
+            style="margin-bottom: 16px !important"
+            *ngFor="let items of sanpham"
+          >
+            <div class="course" *ngIf="items.id_loai === item.ID">
+              <div class="course-thumb">
+                <a routerLink="/san-pham-detail/{{ items.ID }}"
+                  ><img
+                    width="350"
+                    height="350"
+                    src="{{ items.anh }}"
+                    class="attachment-wc-grid-course-thumb size-wc-grid-course-thumb wp-post-image"
+                    alt="{{ items.name }}"
+                /></a>
+              </div>
+              <h5>
+                <a routerLink="/san-pham-detail/{{ items.ID }}">{{
+                  items.name
+                }}</a>
+              </h5>
+              <p>Mã SP: {{ items.ID }}</p>
+              <a routerLink="/dat-hang/{{ items.ID }}" class="secondary button"
+                >Đặt hàng ngay</a
+              >
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<div>
+  <app-footer></app-footer>
+</div>
