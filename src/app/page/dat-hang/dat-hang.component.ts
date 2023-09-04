@@ -27,7 +27,8 @@ export class DatHangComponent implements OnInit {
     private route: ActivatedRoute,
     private http: HttpClient,
     private toastr: ToastrService
-  ) {
+  )
+  {
     this.toastr.toastrConfig.positionClass = 'toast-top-right'; // Thiết lập vị trí hiển thị thông báo
   }
 
